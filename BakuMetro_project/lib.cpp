@@ -1,6 +1,4 @@
-#ifndef BAKUMETRO_PROJECT_HEADER_H
-#define BAKUMETRO_PROJECT_HEADER_H
-
+#include "lib.h"
 #include <iostream>
 #include <thread>
 #include <mutex>
