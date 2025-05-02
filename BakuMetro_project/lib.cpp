@@ -1,3 +1,4 @@
+
 #include "lib.h"
 #include <iostream>
 #include <thread>
@@ -10,28 +11,6 @@
 void sleep_ms(int ms) {
     std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
-
-std::vector<std::string> allStations = {
-        "Icherisheher", "Sahil", "28 May", "Ganjlik", "Nariman Narimanov",
-        "Bakmil", "Ulduz", "Koroghlu", "Gara Garaev", "Neftchiler",
-        "Khalqlar Dostlughu", "Ahmedli", "Hazi Aslanov", "Darnagul", "Azadlig Prospekti",
-        "Nasimi", "Memar Ajami", "20 Yanvar", "Inshaatchilar", "Elmler Akademiyasi",
-        "Nizami", "Khojasan", "Avtovaghzal", "8 Noyabr", "Jafar Jabbarli", "Khatai"
-};
-
-std::map<std::string, int> stationIndex;
-
-std::vector<std::unique_ptr<std::mutex>> stationMutexes;
-
-std::mutex coutMutex;
-
-struct Line {
-    std::string name;
-    std::vector<int> stationIndices;
-};
-
-
-std::vector<Line> lines;
 
 void initializeLines() {
     for (size_t i = 0; i < allStations.size(); ++i) {
@@ -131,7 +110,3 @@ void train(int train_id, const Line& line, bool direction) {
     }
 }
 
-
-
-
-#endif //BAKUMETRO_PROJECT_HEADER_H
