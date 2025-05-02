@@ -1,4 +1,4 @@
-#include "header.h"
+#include "lib.h"
 
 int main() {
     initializeLines();
